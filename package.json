@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "@types/jest": "^23.3.0",
+    "jest": "^23.4.1"
+  },
+  "devDependencies": {
+    "babel-polyfill": "latest",
+    "babel-preset-env": "latest",
+    "babel-register": "latest"
+  },
+  "scripts": {
+    "test-watch": "./node_modules/.bin/jest test --watch",
+    "test": "./node_modules/.bin/jest test"
+  }
+}
