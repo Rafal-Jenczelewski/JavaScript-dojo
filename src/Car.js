@@ -11,9 +11,18 @@
  *
  * This object CANNOT have properties maxFuel, fuelBurtPerKm and currentFuel.
  *
- * Hint: use clousers.
+ * Hint: use clousures.
  */
 
 export const Car = function(maxFuel, fuelBurtPerKm) {
+    let currentFuel = maxFuel;
 
+    return {
+        getFuelLevel: () => (currentFuel/maxFuel * 100) + "%",
+        driveFor: km => {
+            currentFuel -= fuelBurtPerKm * km;
+            if (currentFuel < 0)
+                currentFuel = 0;
+        }
+    }
 };
