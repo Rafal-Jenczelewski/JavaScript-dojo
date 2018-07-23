@@ -15,7 +15,9 @@ describe("Person", () => {
         let age = 18;
 
         let person = new Person(firstName, secondName, age);
-        expect(person).toMatch({firstName, secondName, age})
+        expect(person.firstName).toEqual(firstName);
+        expect(person.secondName).toEqual(secondName);
+        expect(person.age).toEqual(age);
     });
 
     it('checksForLegalAge', () => {
