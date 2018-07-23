@@ -14,5 +14,5 @@ export const Person = function(firstName, secondName, age) {
     this.firstName = firstName;
     this.secondName = secondName;
     this.age = age;
-    this.isLegalAge = () => age > 18;
+    this.isLegalAge = () => age >= 18;
 };
