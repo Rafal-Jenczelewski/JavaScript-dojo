@@ -11,5 +11,8 @@
  * Property isLegalAge should be function returning true when age is over 18, false otherwise.
 **/
 export const Person = function(firstName, secondName, age) {
-
+    this.firstName = firstName;
+    this.secondName = secondName;
+    this.age = age;
+    this.isLegalAge = () => age > 18;
 };
