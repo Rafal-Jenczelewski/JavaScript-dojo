@@ -14,5 +14,9 @@
  */
 
 export const WordCounter = function(words) {
+    let counter = {};
 
+    words.forEach((word) => counter[word] = counter[word] ? counter[word] + 1 : 1);
+    
+    return counter;
 };
