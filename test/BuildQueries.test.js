@@ -51,7 +51,7 @@ describe('BuildQueries', () => {
 
         let queries = BuildQueries(rules);
 
-        expect(queries.length).toBe(rules * 2);
+        expect(queries.length).toBe(rules.length * 2);
         for (const rule of rules) {
             expect(queries.includes(rule.name));
             expect(queries.includes(rule.owner));

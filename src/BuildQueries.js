@@ -11,6 +11,6 @@
  *  Every rule should generate two strings in returned array - one for name and one for owner.
  */
 
-export const BuildQueries = function(rules) {
-
+export const BuildQueries = function (rules) {
+    return rules.map(({name, owner}) => Object.values({name, owner})).reduce((a, b) => a.concat(b), []);
 };
