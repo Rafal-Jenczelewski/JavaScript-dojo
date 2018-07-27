@@ -21,7 +21,7 @@
  *
  *  This call will return promise.
  */
-import {fetch} from 'FetchMock'
+import {fetch} from './FetchMock'
 
 export const FilterUsers = function(filters) {
 
