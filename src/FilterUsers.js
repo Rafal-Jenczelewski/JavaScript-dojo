@@ -21,8 +21,20 @@
  *
  *  This call will return promise.
  */
-import {fetch} from 'FetchMock'
+import {fetch} from './FetchMock'
 
-export const FilterUsers = function(filters) {
+export const FilterUsers = async function (filters) {
+    let response = await fetch();
+    let body = await response.json();
+    let users = body.results;
 
+    if (!filters)
+        return users;
+
+    let {age, gender, name} = filters;
+
+    return users
+        .filter(u => age ? u.age <= age : true)
+        .filter(u => gender ? u.gender === gender : true)
+        .filter(u => name ? u.name.indexOf(name) > -1 : true)
 };
