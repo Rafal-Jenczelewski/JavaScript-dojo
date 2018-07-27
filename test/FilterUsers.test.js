@@ -41,7 +41,7 @@ describe('FilterUsers', () => {
 
         valuesToTest.forEach(async gen => {
             it(`should filter out ${gen}s`, () => {
-                let users = FilterUsers({gender: gen})''
+                let users = FilterUsers({gender: gen});
 
                 for (let user of users) {
                     expect(user.gender).toBe(gen);
