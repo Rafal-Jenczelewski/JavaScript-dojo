@@ -25,9 +25,9 @@ describe('FilterUsers', () => {
     describe('filtering by name', () => {
         let valuesToTest = ['John', 'Lee', 'Smith'];
 
-        valuesToTest.forEach(async name => {
-            it(`should filters out names not containing ${name}`, () => {
-                let users = FilterUsers({name});
+        valuesToTest.forEach(name => {
+            it(`should filters out names not containing ${name}`, async () => {
+                let users = await FilterUsers({name});
 
                 for (const user of users) {
                     expect(user.name).toContain(name);
@@ -39,9 +39,9 @@ describe('FilterUsers', () => {
     describe('filtering by gender', () => {
         let valuesToTest = ['male', 'female'];
 
-        valuesToTest.forEach(async gen => {
-            it(`should filter out ${gen}s`, () => {
-                let users = FilterUsers({gender: gen});
+        valuesToTest.forEach( gen => {
+            it(`should filter out ${gen}s`, async () => {
+                let users = await FilterUsers({gender: gen});
 
                 for (let user of users) {
                     expect(user.gender).toBe(gen);
