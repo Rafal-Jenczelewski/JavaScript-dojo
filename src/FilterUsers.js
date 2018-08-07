@@ -31,10 +31,10 @@ export const FilterUsers = async function (filters) {
     if (!filters)
         return users;
 
-    let {age, gender, name} = filters;
+    let {age: ageFilter, gender: genderFilter, name: nameFilter} = filters;
 
     return users
-        .filter(u => age ? u.age <= age : true)
-        .filter(u => gender ? u.gender === gender : true)
-        .filter(u => name ? u.name.indexOf(name) > -1 : true)
+        .filter(u => ageFilter ? u.age <= ageFilter : true)
+        .filter(u => genderFilter ? u.gender === genderFilter : true)
+        .filter(u => nameFilter ? u.name.indexOf(nameFilter) > -1 : true)
 };
