@@ -1,4 +1,6 @@
 /**
+ * RUN NPM INSTALL BEFORE THIS EX!!!!!!!!!!!!!!!
+ *
  * In this exercise, you need to:
  * Write a function that changes prototype of given object to object of class Animal.
  * Animal class has those methods
