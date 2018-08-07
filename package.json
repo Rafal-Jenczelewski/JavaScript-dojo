@@ -9,7 +9,8 @@
   "devDependencies": {
     "babel-polyfill": "latest",
     "babel-preset-env": "latest",
-    "babel-register": "latest"
+    "babel-register": "latest",
+    "babel-plugin-transform-object-rest-spread": "latest"
   },
   "scripts": {
     "test-watch": "./node_modules/.bin/jest test --watch",
