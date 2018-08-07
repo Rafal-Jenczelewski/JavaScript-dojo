@@ -7,6 +7,16 @@
  * Return value should be just user object taken from mock.
  */
 
-export const Cache = function(name) {
+import {fetch} from './FetchMock'
 
+let cache = {};
+
+export const Cache = async function (name) {
+    if (!cache[name]) {
+        let response = await fetch();
+        let result = await response.json();
+        cache[name] = result.results.find(u => u.name === name);
+    }
+
+    return cache[name];
 };

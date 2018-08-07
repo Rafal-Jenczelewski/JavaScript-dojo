@@ -64,7 +64,7 @@ export const fetch = function () {
         body: {},
         json: () => {
             return new Promise(resolve => {
-                setTimeout(resolve({
+                setTimeout(() => resolve({
                     results: results
                 }), 1000)
             })
