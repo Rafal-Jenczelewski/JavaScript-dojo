@@ -7,6 +7,6 @@
  * Return value should be just user object taken from mock.
  */
 
-export const Cache = function(name) {
+export const Cache = async function(name) {
 
 };
