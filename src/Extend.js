@@ -5,9 +5,21 @@
  *  eat => "I'm eating"
  *  walk => "I'm walking"
  *
- *  This function should return new object.
+ *  This function should return new object without modifying given object.
  */
 
 export const Extend = function(obj) {
-
+    let newObj = {...obj};
+    newObj.prototype = new Animal();
+    return newObj;
 };
+
+class Animal {
+    eat() {
+        return "I'm eating";
+    }
+
+    walk() {
+        return "I'm walking";
+    }
+}
