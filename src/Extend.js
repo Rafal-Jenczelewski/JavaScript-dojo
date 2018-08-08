@@ -12,7 +12,7 @@
 
 export const Extend = function(obj) {
     let newObj = {...obj};
-    newObj.prototype = new Animal();
+    newObj.__proto__ = new Animal();
     return newObj;
 };
 
