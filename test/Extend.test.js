@@ -5,6 +5,21 @@ describe('Extend', () => {
         let obj = {a: 1};
         let newObj = Extend(obj);
 
-        console.log(newObj);
+        expect(newObj).toHaveProperty('a', 1);
     });
-})
+
+    it('should not be the same object', () => {
+        let obj = {};
+        let newObj = Extend(obj);
+
+        expect(newObj).not.toBe(obj);
+    });
+
+    it('should have properties from Animal', () => {
+        let obj = {};
+        let newObj = Extend(obj);
+
+        expect(newObj).toHaveProperty('eat');
+        expect(newObj).toHaveProperty('walk');
+    });
+});
