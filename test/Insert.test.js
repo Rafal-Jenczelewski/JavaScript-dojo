@@ -25,7 +25,7 @@ describe('Insert', () => {
 
             expect(output.indexOf(text)).toBeGreaterThan(0);
 
-            output = Insert(text, "middle");
+            output = Insert(text);
 
             expect(output.indexOf(text)).toBeGreaterThan(0);
         })
