@@ -7,6 +7,8 @@
  * Return value should be just user object taken from mock.
  */
 
+import fetch from './FetchMock';
+
 export const Cache = async function(name) {
 
 };
